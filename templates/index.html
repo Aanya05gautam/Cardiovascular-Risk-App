@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cardiovascular Risk Prediction</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(to right, #74ebd5, #acb6e5);
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        /* Info Box */
+        .info-box {
+            background-color: #f0f8ff;
+            padding: 20px;
+            border: 2px solid #4CAF50;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .info-box h2 {
+            color: #2E8B57;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .info-box p {
+            color: #333;
+            font-size: 16px;
+            text-align: justify;
+        }
+
+        .info-images {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 15px;
+        }
+
+        .info-images img {
+            width: 50px;
+            height: 50px;
+            animation: bounce 2s infinite;
+        }
+
+        /* Cards for risk factors */
+        .cards {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .card {
+            flex: 1;
+            background-color: #ffffffcc;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card img {
+            width: 40px;
+            height: 40px;
+            margin-bottom: 10px;
+        }
+
+        /* Form Container */
+        .form-container {
+            background: #ffffffcc;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        .form-container h2 {
+            text-align: center;
+            color: #2E8B57;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: 600;
+            color: #333;
+            display: block;
+            margin-bottom: 5px;
+            margin-top: 15px;
+        }
+
+        /* Input Icon Wrapper */
+        .input-icon {
+            position: relative;
+            margin-bottom: 15px;
+        }
+
+        .input-icon input {
+            width: 100%;
+            height: 38px;
+            padding-left: 40px; /* space for icon */
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+
+        .input-icon img {
+            position: absolute;
+            top: 50%;
+            left: 10px;
+            transform: translateY(-50%);
+            width: 20px;
+            height: 20px;
+            object-fit: contain;
+            pointer-events: none;
+            opacity: 0.8;
+        }
+
+        /* Submit Button */
+        input[type="submit"] {
+            background-color: #2E8B57;
+            color: white;
+            padding: 12px;
+            width: 100%;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #276749;
+        }
+
+        /* Prediction Result */
+        .result {
+            margin-top: 25px;
+            font-size: 1.4em;
+            font-weight: bold;
+            text-align: center;
+            padding: 12px;
+            border-radius: 8px;
+            color: white;
+        }
+
+        .low { background-color: #28a745; }
+        .moderate { background-color: #FFA500; }
+        .high { background-color: #DC3545; }
+
+        /* Animations */
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <!-- Info Section -->
+    <div class="info-box">
+        <h2>🫀 What is Cardiovascular Risk?</h2>
+        <p>
+            Cardiovascular risk refers to the likelihood of developing heart-related problems such as 
+            heart attack, stroke, or other vascular conditions. Key risk factors include high blood pressure, 
+            high cholesterol, diabetes, obesity, smoking, unhealthy diet, and physical inactivity.
+        </p>
+        <div class="info-images">
+            <img src="https://cdn-icons-png.flaticon.com/512/2966/2966486.png" alt="Heart Icon">
+            <img src="https://cdn-icons-png.flaticon.com/512/2966/2966506.png" alt="Cholesterol Icon">
+            <img src="https://cdn-icons-png.flaticon.com/512/2920/2920310.png" alt="Exercise Icon">
+        </div>
+    </div>
+
+    <!-- Cards for Risk Factors -->
+    <div class="cards">
+        <div class="card">
+            <img src="https://cdn-icons-png.flaticon.com/512/2966/2966486.png" alt="Blood Pressure">
+            <h4>Blood Pressure</h4>
+            <p>High blood pressure increases your risk of heart disease and stroke.</p>
+        </div>
+        <div class="card">
+            <img src="https://cdn-icons-png.flaticon.com/512/2966/2966506.png" alt="Cholesterol">
+            <h4>Cholesterol</h4>
+            <p>High cholesterol can lead to artery blockage and heart problems.</p>
+        </div>
+        <div class="card">
+            <img src="https://cdn-icons-png.flaticon.com/512/2910/2910762.png" alt="Lifestyle">
+            <h4>Lifestyle</h4>
+            <p>Exercise regularly, eat healthy, and avoid smoking to reduce risks.</p>
+        </div>
+    </div>
+
+    <!-- Form Section -->
+    <div class="form-container">
+        <h2>💡 Cardiovascular Risk Prediction</h2>
+        <form action="/predict" method="post">
+            <!-- Age -->
+            <label>Age:</label>
+            <div class="input-icon">
+                <img src="https://cdn-icons-png.flaticon.com/512/2937/2937753.png" alt="Age Icon">
+                <input type="number" name="age" placeholder="Enter Age" required>
+            </div>
+
+            <!-- Sex -->
+            <label>Sex (1 = Male, 0 = Female):</label>
+            <div class="input-icon">
+                <img src="https://cdn-icons-png.flaticon.com/512/2920/2920310.png" alt="Sex Icon">
+                <input type="number" name="sex" min="0" max="1" placeholder="0 = Female, 1 = Male" required>
+            </div>
+
+            <!-- Chest Pain Type -->
+            <label>Chest Pain Type (0–3):</label>
+            <div class="input-icon">
+                <img src="https://cdn-icons-png.flaticon.com/512/2966/2966485.png" alt="Chest Pain Icon">
+                <input type="number" name="cp" min="0" max="3" placeholder="0-3" required>
+            </div>
+
+            <!-- Resting Blood Pressure -->
+            <label>Resting Blood Pressure:</label>
+            <div class="input-icon">
+                <img src="https://cdn-icons-png.flaticon.com/512/2966/2966486.png" alt="BP Icon">
+                <input type="number" name="trestbps" placeholder="mm Hg" required>
+            </div>
+
+            <!-- Cholesterol Level -->
+            <label>Cholesterol Level:</label>
+            <div class="input-icon">
+                <img src="https://cdn-icons-png.flaticon.com/512/2966/2966506.png" alt="Cholesterol Icon">
+                <input type="number" name="chol" placeholder="mg/dL" required>
+            </div>
+
+            <!-- Max Heart Rate -->
+            <label>Max Heart Rate Achieved:</label>
+            <div class="input-icon">
+                <img src="https://cdn-icons-png.flaticon.com/512/2907/2907266.png" alt="Heart Rate Icon">
+                <input type="number" name="thalach" placeholder="Enter max HR" required>
+            </div>
+
+            <!-- Exercise Induced Angina -->
+            <label>Exercise Induced Angina (1 = Yes, 0 = No):</label>
+            <div class="input-icon">
+                <img src="https://cdn-icons-png.flaticon.com/512/2910/2910762.png" alt="Angina Icon">
+                <input type="number" name="exang" min="0" max="1" placeholder="0 = No, 1 = Yes" required>
+            </div>
+
+            <!-- Submit Button -->
+            <input type="submit" value="🔍 Predict Risk">
+        </form>
+
+        {% if prediction_text %}
+        <div class="result {% if 'High' in prediction_text %}high{% elif 'Low' in prediction_text %}low{% else %}moderate{% endif %}">
+            {{ prediction_text }}
+        </div>
+        {% endif %}
+    </div>
+
+</div>
+</body>
+</html>
