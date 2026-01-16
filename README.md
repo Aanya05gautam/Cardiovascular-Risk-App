@@ -4,7 +4,7 @@ A machine learning–based web application that predicts cardiovascular risk usi
 
 ## 🌐 Live Website
 
-🔗 cardiovascular-risk-app5.vercel.app
+🔗  https://cardiovascular-risk-app5.vercel.app/
 
 
 ## 📁 Project Structure
