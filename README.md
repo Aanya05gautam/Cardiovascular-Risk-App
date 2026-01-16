@@ -4,9 +4,8 @@ A machine learning–based web application that predicts cardiovascular risk usi
 
 ## 🌐 Live Website
 
-🔗 https://cardiovascular-risk-app5-6k2f3v546-aanya-gautams-projects.vercel.app/
+🔗 cardiovascular-risk-app5.vercel.app
 
-(replace with your actual deployed URL)
 
 ## 📁 Project Structure
 ```
